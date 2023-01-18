@@ -1,6 +1,6 @@
 <?php
 
-namespace Sawirricardo\Whatsapp\Data;
+namespace Rambhosale\Whatsapp\Data;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;

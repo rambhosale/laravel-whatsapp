@@ -1,12 +1,12 @@
 <?php
 
-namespace Sawirricardo\Whatsapp;
+namespace Rambhosale\Whatsapp;
 
 use GuzzleHttp\ClientInterface;
-use Sawirricardo\Whatsapp\Data\ResponseData;
-use Sawirricardo\Whatsapp\Exceptions\FailedConnectionException;
-use Sawirricardo\Whatsapp\Exceptions\MessageNotSetException;
-use Sawirricardo\Whatsapp\Interfaces\HasMessageData;
+use Rambhosale\Whatsapp\Data\ResponseData;
+use Rambhosale\Whatsapp\Exceptions\FailedConnectionException;
+use Rambhosale\Whatsapp\Exceptions\MessageNotSetException;
+use Rambhosale\Whatsapp\Interfaces\HasMessageData;
 
 class Whatsapp
 {

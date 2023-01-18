@@ -1,10 +1,10 @@
 <?php
 
-namespace Sawirricardo\Whatsapp\Data;
+namespace Rambhosale\Whatsapp\Data;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
-use Sawirricardo\Whatsapp\Traits\HasTypes;
+use Rambhosale\Whatsapp\Traits\HasTypes;
 
 class EmailData implements Arrayable, Jsonable
 {

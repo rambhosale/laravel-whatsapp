@@ -1,6 +1,6 @@
 <?php
 
-namespace Sawirricardo\Whatsapp\Data;
+namespace Rambhosale\Whatsapp\Data;
 
 class InteractiveButtonMessageData extends InteractiveMessageData
 {

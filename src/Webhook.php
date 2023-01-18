@@ -1,6 +1,6 @@
 <?php
 
-namespace Sawirricardo\Whatsapp;
+namespace Rambhosale\Whatsapp;
 
 class Webhook
 {

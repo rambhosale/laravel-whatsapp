@@ -1,6 +1,6 @@
 <?php
 
-namespace Sawirricardo\Whatsapp\Exceptions;
+namespace Rambhosale\Whatsapp\Exceptions;
 
 use Exception;
 

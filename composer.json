@@ -1,16 +1,16 @@
 {
-    "name": "sawirricardo/whatsapp-php",
+    "name": "rambhosale/laravel-whatsapp",
     "description": "Use Whatsapp's Cloud API",
     "keywords": [
-        "sawirricardo",
-        "whatsapp-php"
+        "rambhosale",
+        "laravel-whatsapp"
     ],
-    "homepage": "https://github.com/sawirricardo/whatsapp-php",
+    "homepage": "https://github.com/rambhosale/laravel-whatsapp",
     "license": "MIT",
     "authors": [
         {
-            "name": "sawirricardo",
-            "email": "sawir.ricardo@gmail.com",
+            "name": "rambhosale",
+            "email": "zenosamav2.0@gmail.com",
             "role": "Developer"
         }
     ],
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Sawirricardo\\Whatsapp\\": "src"
+            "Rambhosale\\Whatsapp\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sawirricardo\\Whatsapp\\Tests\\": "tests"
+            "Rambhosale\\Whatsapp\\Tests\\": "tests"
         }
     },
     "scripts": {

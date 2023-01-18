@@ -1,9 +1,9 @@
 <?php
 
 use GuzzleHttp\Psr7\Response;
-use Sawirricardo\Whatsapp\Data\ResponseData;
-use Sawirricardo\Whatsapp\Data\TextMessageData;
-use Sawirricardo\Whatsapp\Whatsapp;
+use Rambhosale\Whatsapp\Data\ResponseData;
+use Rambhosale\Whatsapp\Data\TextMessageData;
+use Rambhosale\Whatsapp\Whatsapp;
 
 beforeEach(function () {
 });

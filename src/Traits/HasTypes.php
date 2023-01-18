@@ -1,6 +1,6 @@
 <?php
 
-namespace Sawirricardo\Whatsapp\Traits;
+namespace Rambhosale\Whatsapp\Traits;
 
 trait HasTypes
 {
