@@ -6,8 +6,8 @@ use Rambhosale\LaravelWhatsapp\Interfaces\HasMessageData;
 
 class TemplateMessageData implements HasMessageData
 {
-    public function __construct(private string $templateName, private string $languageCode = 'en_US') {
-
+    public function __construct(private string $templateName, private string $languageCode = 'en_US')
+    {
     }
 
     public function getType(): string
@@ -18,7 +18,7 @@ class TemplateMessageData implements HasMessageData
     public function toArray(): array
     {
         return [
-            'name' => $this->templateName,
+            'name'     => $this->templateName,
             'language' => [
                 'code' => $this->languageCode,
             ],

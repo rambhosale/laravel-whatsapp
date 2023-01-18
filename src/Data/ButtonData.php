@@ -42,9 +42,9 @@ class ButtonData implements Arrayable, Jsonable
     public function toArray()
     {
         return [
-            'type' => $this->type,
+            'type'  => $this->type,
             'reply' => [
-                'id' => $this->id,
+                'id'    => $this->id,
                 'title' => $this->title,
             ],
         ];

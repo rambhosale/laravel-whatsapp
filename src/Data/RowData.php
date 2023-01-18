@@ -21,16 +21,16 @@ class RowData implements Arrayable, Jsonable
         $title,
         $description
     ) {
-        $this->id = $id;
-        $this->title = $title;
+        $this->id          = $id;
+        $this->title       = $title;
         $this->description = $description;
     }
 
     public function toArray()
     {
         return [
-            'id' => $this->id,
-            'title' => $this->title,
+            'id'          => $this->id,
+            'title'       => $this->title,
             'description' => $this->description,
         ];
     }

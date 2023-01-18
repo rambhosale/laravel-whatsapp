@@ -24,7 +24,7 @@ class SectionData implements Arrayable, Jsonable
     {
         return [
             'title' => $this->title,
-            'rows' => array_map(function (RowData $row) {
+            'rows'  => array_map(function (RowData $row) {
                 return $row->toArray();
             }, $this->rows),
         ];

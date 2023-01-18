@@ -19,25 +19,25 @@ class AddressData implements Arrayable, Jsonable
 
     public function __construct($street, $city, $state, $zip, $country, $countryCode, $type = 'HOME')
     {
-        $this->street = $street;
-        $this->city = $city;
-        $this->state = $state;
-        $this->zip = $zip;
-        $this->country = $country;
+        $this->street      = $street;
+        $this->city        = $city;
+        $this->state       = $state;
+        $this->zip         = $zip;
+        $this->country     = $country;
         $this->countryCode = $countryCode;
-        $this->type = $type;
+        $this->type        = $type;
     }
 
     public function toArray()
     {
         return [
-            'street' => $this->street,
-            'city' => $this->city,
-            'state' => $this->state,
-            'zip' => $this->zip,
-            'country' => $this->country,
+            'street'      => $this->street,
+            'city'        => $this->city,
+            'state'       => $this->state,
+            'zip'         => $this->zip,
+            'country'     => $this->country,
             'countryCode' => $this->countryCode,
-            'type' => $this->type,
+            'type'        => $this->type,
         ];
     }
 

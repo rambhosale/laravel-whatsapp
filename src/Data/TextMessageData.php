@@ -8,23 +8,23 @@ class TextMessageData implements HasMessageData
 {
     public function __construct(private string $body, private bool $previewUrl = false)
     {
-        $this->body = $body;
+        $this->body       = $body;
         $this->previewUrl = $previewUrl;
     }
 
-    public static function make($body, $previewUrl = false): TextMessageData
+    public static function make($body, $previewUrl = false): self
     {
         return new static($body, $previewUrl);
     }
 
-    public function withPreviewUrl(): TextMessageData
+    public function withPreviewUrl(): self
     {
         $this->previewUrl = true;
 
         return $this;
     }
 
-    public function body($content): TextMessageData
+    public function body($content): self
     {
         $this->body = $content;
 
@@ -39,7 +39,7 @@ class TextMessageData implements HasMessageData
     public function toArray(): array
     {
         return [
-            'body' => $this->body,
+            'body'        => $this->body,
             'preview_url' => $this->previewUrl,
         ];
     }

@@ -47,10 +47,10 @@ class LocationMessageData implements HasMessageData
     public function toArray()
     {
         return [
-            'latitude' => $this->latitude,
+            'latitude'  => $this->latitude,
             'longitude' => $this->longitude,
-            'name' => $this->name,
-            'address' => $this->address,
+            'name'      => $this->name,
+            'address'   => $this->address,
         ];
     }
 

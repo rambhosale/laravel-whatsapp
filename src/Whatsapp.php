@@ -31,28 +31,28 @@ class Whatsapp
         $this->client = $client ?? new \GuzzleHttp\Client();
     }
 
-    public static function make($client = null): Whatsapp
+    public static function make($client = null): self
     {
         return (new static($client))
             ->token(config('whatsapp.token'))
             ->phoneId(config('whatsapp.phone_id'));
     }
 
-    public function phoneId($phoneId): Whatsapp
+    public function phoneId($phoneId): self
     {
         $this->phoneId = $phoneId;
 
         return $this;
     }
 
-    public function token($token): Whatsapp
+    public function token($token): self
     {
         $this->token = $token;
 
         return $this;
     }
 
-    public function to($to): Whatsapp
+    public function to($to): self
     {
         $this->to = $to;
 
@@ -60,7 +60,7 @@ class Whatsapp
     }
 
     /** @param HasMessageData $message */
-    public function message($message): Whatsapp
+    public function message($message): self
     {
         $this->message = $message;
 
@@ -77,13 +77,13 @@ class Whatsapp
         $response = $this->client->request('POST', $this->defineBaseUrl() . '/messages', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->token,
-                'Content-Type' => 'application/json',
+                'Content-Type'  => 'application/json',
             ],
             'json' => [
-                'recipient_type' => 'individual',
-                'messaging_product' => 'whatsapp',
-                'to' => $this->to,
-                'type' => $this->message->getType(),
+                'recipient_type'          => 'individual',
+                'messaging_product'       => 'whatsapp',
+                'to'                      => $this->to,
+                'type'                    => $this->message->getType(),
                 $this->message->getType() => $this->message->toArray(),
             ],
         ]);
@@ -100,12 +100,12 @@ class Whatsapp
         $response = $this->client->request('POST', $this->defineBaseUrl() . '/messages', [
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->token,
-                'Content-Type' => 'application/json',
+                'Content-Type'  => 'application/json',
             ],
             'json' => [
                 'messaging_product' => 'whatsapp',
-                'status' => 'read',
-                'message_id' => $messageId,
+                'status'            => 'read',
+                'message_id'        => $messageId,
             ],
         ]);
 

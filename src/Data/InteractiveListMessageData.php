@@ -54,12 +54,12 @@ class InteractiveListMessageData extends InteractiveMessageData
     public function toArray()
     {
         return [
-            'type' => 'list',
+            'type'   => 'list',
             'header' => ['text' => $this->header],
-            'body' => ['text' => $this->body],
+            'body'   => ['text' => $this->body],
             'footer' => ['text' => $this->footer],
             'action' => [
-                'button' => $this->buttonText,
+                'button'   => $this->buttonText,
                 'sections' => array_map(function ($section) {
                     return $section->toArray();
                 }, $this->sections),

@@ -17,11 +17,11 @@ class NameData implements Arrayable, Jsonable
     public function __construct($formattedName, $firstName, $lastName, $middleName, $suffix, $prefix)
     {
         $this->formattedName = $formattedName;
-        $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->middleName = $middleName;
-        $this->suffix = $suffix;
-        $this->prefix = $prefix;
+        $this->firstName     = $firstName;
+        $this->lastName      = $lastName;
+        $this->middleName    = $middleName;
+        $this->suffix        = $suffix;
+        $this->prefix        = $prefix;
     }
 
     public static function make(
@@ -39,11 +39,11 @@ class NameData implements Arrayable, Jsonable
     {
         return [
             'formatted_name' => $this->formattedName,
-            'first_name' => $this->firstName,
-            'last_name' => $this->lastName,
-            'middle_name' => $this->middleName,
-            'suffix' => $this->suffix,
-            'prefix' => $this->prefix,
+            'first_name'     => $this->firstName,
+            'last_name'      => $this->lastName,
+            'middle_name'    => $this->middleName,
+            'suffix'         => $this->suffix,
+            'prefix'         => $this->prefix,
         ];
     }
 

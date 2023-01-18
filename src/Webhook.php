@@ -28,7 +28,7 @@ class Webhook
 
     public function __construct($token, $verifyToken)
     {
-        $this->token = $token;
+        $this->token       = $token;
         $this->verifyToken = $verifyToken;
     }
 
@@ -150,7 +150,7 @@ class Webhook
 
         $metadata = data_get($data, 'entry.0.changes.0.value.metadata');
         $contacts = data_get($data, 'entry.0.changes.0.value.contacts.0');
-        if (! is_null($status = data_get($data, 'entry.0.statuses.0'))) {
+        if (!is_null($status = data_get($data, 'entry.0.statuses.0'))) {
             if ($status['status'] === 'delivered') {
                 call_user_func($this->whenMessageDelivered, $status);
 
@@ -163,7 +163,7 @@ class Webhook
             }
         }
 
-        if (! is_null($status = data_get($data, 'entry.0.changes.0.value.statuses.0'))) {
+        if (!is_null($status = data_get($data, 'entry.0.changes.0.value.statuses.0'))) {
             if ($status['status'] === 'failed') {
                 call_user_func($this->whenMessageFailed, $status);
 
@@ -172,7 +172,6 @@ class Webhook
         }
 
         $message = data_get($data, 'entry.0.changes.0.value.messages.0');
-
 
         if (array_key_exists('location', $message)) {
             call_user_func($this->whenTextedWithLocation, $message);

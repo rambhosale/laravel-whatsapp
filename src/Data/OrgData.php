@@ -13,9 +13,9 @@ class OrgData implements Arrayable, Jsonable
 
     public function __construct($company, $department, $title)
     {
-        $this->company = $company;
+        $this->company    = $company;
         $this->department = $department;
-        $this->title = $title;
+        $this->title      = $title;
     }
 
     public static function make(
@@ -29,9 +29,9 @@ class OrgData implements Arrayable, Jsonable
     public function toArray()
     {
         return [
-            'company' => $this->company,
+            'company'    => $this->company,
             'department' => $this->department,
-            'title' => $this->title,
+            'title'      => $this->title,
         ];
     }
 

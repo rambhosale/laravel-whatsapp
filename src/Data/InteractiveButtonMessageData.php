@@ -30,8 +30,8 @@ class InteractiveButtonMessageData extends InteractiveMessageData
     public function toArray()
     {
         return [
-            'type' => 'button',
-            'body' => ['text' => $this->body],
+            'type'   => 'button',
+            'body'   => ['text' => $this->body],
             'action' => [
                 'buttons' => array_map(function ($button) {
                     return $button->toArray();

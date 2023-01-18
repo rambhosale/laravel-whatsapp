@@ -8,7 +8,7 @@ use Illuminate\Contracts\Support\Jsonable;
 class ContactData implements Arrayable, Jsonable
 {
     public $addresses = [];
-    public $emails = [];
+    public $emails    = [];
     public $name;
     public $birthday;
     public $org;
@@ -18,11 +18,11 @@ class ContactData implements Arrayable, Jsonable
     {
         return [
             'addresses' => $this->addresses,
-            'emails' => $this->emails,
-            'name' => $this->name,
-            'birthday' => $this->birthday,
-            'org' => $this->org,
-            'phones' => $this->phones,
+            'emails'    => $this->emails,
+            'name'      => $this->name,
+            'birthday'  => $this->birthday,
+            'org'       => $this->org,
+            'phones'    => $this->phones,
         ];
     }
 

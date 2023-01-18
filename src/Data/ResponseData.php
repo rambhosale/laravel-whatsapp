@@ -22,8 +22,8 @@ class ResponseData implements Arrayable, Jsonable
         $messages
     ) {
         $this->messagingProduct = $messagingProduct;
-        $this->contacts = $contacts;
-        $this->messages = $messages;
+        $this->contacts         = $contacts;
+        $this->messages         = $messages;
     }
 
     public static function fromArray($data)
@@ -43,8 +43,8 @@ class ResponseData implements Arrayable, Jsonable
     {
         return [
             'messaging_product' => $this->messagingProduct,
-            'contacts' => $this->contacts->toArray(),
-            'messages' => $this->messages->toArray(),
+            'contacts'          => $this->contacts->toArray(),
+            'messages'          => $this->messages->toArray(),
         ];
     }
 
