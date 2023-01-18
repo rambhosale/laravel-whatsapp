@@ -81,6 +81,7 @@ class Whatsapp
             ],
             'json' => [
                 'recipient_type' => 'individual',
+                'messaging_product' => 'whatsapp',
                 'to' => $this->to,
                 'type' => $this->message->getType(),
                 $this->message->getType() => $this->message->toArray(),
