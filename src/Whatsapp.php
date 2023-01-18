@@ -31,26 +31,28 @@ class Whatsapp
         $this->client = $client ?? new \GuzzleHttp\Client();
     }
 
-    public static function make($client = null)
+    public static function make($client = null): Whatsapp
     {
-        return new static($client);
+        return (new static($client))
+            ->token(config('whatsapp.token'))
+            ->phoneId(config('whatsapp.phone_id'));
     }
 
-    public function phoneId($phoneId)
+    public function phoneId($phoneId): Whatsapp
     {
         $this->phoneId = $phoneId;
 
         return $this;
     }
 
-    public function token($token)
+    public function token($token): Whatsapp
     {
         $this->token = $token;
 
         return $this;
     }
 
-    public function to($to)
+    public function to($to): Whatsapp
     {
         $this->to = $to;
 
@@ -58,7 +60,7 @@ class Whatsapp
     }
 
     /** @param HasMessageData $message */
-    public function message($message)
+    public function message($message): Whatsapp
     {
         $this->message = $message;
 
@@ -92,7 +94,7 @@ class Whatsapp
         return ResponseData::fromArray(json_decode($response->getBody(), true));
     }
 
-    public function markAsRead($messageId)
+    public function markAsRead($messageId): void
     {
         $response = $this->client->request('POST', $this->defineBaseUrl() . '/messages', [
             'headers' => [
@@ -111,8 +113,8 @@ class Whatsapp
         }
     }
 
-    protected function defineBaseUrl()
+    protected function defineBaseUrl(): string
     {
-        return 'https://graph.facebook.com/v13.0/' . $this->phoneId;
+        return 'https://graph.facebook.com/v15.0/' . $this->phoneId;
     }
 }
