@@ -6,40 +6,37 @@ use Rambhosale\LaravelWhatsapp\Interfaces\HasMessageData;
 
 class TextMessageData implements HasMessageData
 {
-    private $previewUrl = false;
-    private $body = null;
-
-    public function __construct($body, $previewUrl)
+    public function __construct(private string $body, private bool $previewUrl = false)
     {
         $this->body = $body;
         $this->previewUrl = $previewUrl;
     }
 
-    public static function make($body, $previewUrl = false)
+    public static function make($body, $previewUrl = false): TextMessageData
     {
         return new static($body, $previewUrl);
     }
 
-    public function withPreviewUrl()
+    public function withPreviewUrl(): TextMessageData
     {
         $this->previewUrl = true;
 
         return $this;
     }
 
-    public function body($content)
+    public function body($content): TextMessageData
     {
         $this->body = $content;
 
         return $this;
     }
 
-    public function getType()
+    public function getType(): string
     {
         return 'text';
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'body' => $this->body,
@@ -47,7 +44,7 @@ class TextMessageData implements HasMessageData
         ];
     }
 
-    public function toJson($options = 0)
+    public function toJson($options = 0): string
     {
         return json_encode($this->toArray(), $options);
     }
