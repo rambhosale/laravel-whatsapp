@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Rambhosale\\Whatsapp\\": "src"
+            "Rambhosale\\LaravelWhatsapp\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rambhosale\\Whatsapp\\Tests\\": "tests"
+            "Rambhosale\\LaravelWhatsapp\\Tests\\": "tests"
         }
     },
     "scripts": {

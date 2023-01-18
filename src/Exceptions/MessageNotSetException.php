@@ -1,6 +1,6 @@
 <?php
 
-namespace Rambhosale\Whatsapp\Exceptions;
+namespace Rambhosale\LaravelWhatsapp\Exceptions;
 
 use InvalidArgumentException;
 

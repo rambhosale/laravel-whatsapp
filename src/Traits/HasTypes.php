@@ -1,6 +1,6 @@
 <?php
 
-namespace Rambhosale\Whatsapp\Traits;
+namespace Rambhosale\LaravelWhatsapp\Traits;
 
 trait HasTypes
 {

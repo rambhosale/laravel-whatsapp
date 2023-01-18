@@ -1,10 +1,10 @@
 <?php
 
-namespace Rambhosale\Whatsapp\Data;
+namespace Rambhosale\LaravelWhatsapp\Data;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
-use Rambhosale\Whatsapp\Traits\HasTypes;
+use Rambhosale\LaravelWhatsapp\Traits\HasTypes;
 
 class AddressData implements Arrayable, Jsonable
 {

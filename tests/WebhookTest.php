@@ -1,6 +1,6 @@
 <?php
 
-use Rambhosale\Whatsapp\Webhook;
+use Rambhosale\LaravelWhatsapp\Webhook;
 
 it('can listen for event', function () {
     Webhook::make('token', 'verifyToken')

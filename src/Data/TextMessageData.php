@@ -1,8 +1,8 @@
 <?php
 
-namespace Rambhosale\Whatsapp\Data;
+namespace Rambhosale\LaravelWhatsapp\Data;
 
-use Rambhosale\Whatsapp\Interfaces\HasMessageData;
+use Rambhosale\LaravelWhatsapp\Interfaces\HasMessageData;
 
 class TextMessageData implements HasMessageData
 {

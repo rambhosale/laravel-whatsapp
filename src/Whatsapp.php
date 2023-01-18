@@ -1,12 +1,12 @@
 <?php
 
-namespace Rambhosale\Whatsapp;
+namespace Rambhosale\LaravelWhatsapp;
 
 use GuzzleHttp\ClientInterface;
-use Rambhosale\Whatsapp\Data\ResponseData;
-use Rambhosale\Whatsapp\Exceptions\FailedConnectionException;
-use Rambhosale\Whatsapp\Exceptions\MessageNotSetException;
-use Rambhosale\Whatsapp\Interfaces\HasMessageData;
+use Rambhosale\LaravelWhatsapp\Data\ResponseData;
+use Rambhosale\LaravelWhatsapp\Exceptions\FailedConnectionException;
+use Rambhosale\LaravelWhatsapp\Exceptions\MessageNotSetException;
+use Rambhosale\LaravelWhatsapp\Interfaces\HasMessageData;
 
 class Whatsapp
 {

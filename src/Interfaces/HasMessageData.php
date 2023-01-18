@@ -1,6 +1,6 @@
 <?php
 
-namespace Rambhosale\Whatsapp\Interfaces;
+namespace Rambhosale\LaravelWhatsapp\Interfaces;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;

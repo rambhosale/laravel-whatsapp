@@ -1,9 +1,9 @@
 <?php
 
 use GuzzleHttp\Psr7\Response;
-use Rambhosale\Whatsapp\Data\ResponseData;
-use Rambhosale\Whatsapp\Data\TextMessageData;
-use Rambhosale\Whatsapp\Whatsapp;
+use Rambhosale\LaravelWhatsapp\Data\ResponseData;
+use Rambhosale\LaravelWhatsapp\Data\TextMessageData;
+use Rambhosale\LaravelWhatsapp\Whatsapp;
 
 beforeEach(function () {
 });

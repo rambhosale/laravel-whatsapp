@@ -1,6 +1,6 @@
 <?php
 
-namespace Rambhosale\Whatsapp\Data;
+namespace Rambhosale\LaravelWhatsapp\Data;
 
 class InteractiveListMessageData extends InteractiveMessageData
 {

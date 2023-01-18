@@ -25,7 +25,7 @@ composer require sawirricardo/whatsapp-php
 ## Usage
 
 ```php
-$client = \Rambhosale\Whatsapp\Whatsapp::make($token, $phoneId)
+$client = \Rambhosale\LaravelWhatsapp\Whatsapp::make($token, $phoneId)
     ->to('+111111111')
     ->message(TextMessageData::make('Hello world!'))
     ->send();
